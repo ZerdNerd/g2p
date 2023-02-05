@@ -18,7 +18,7 @@ setup(
   author = 'ZerdNerd & Kyubyong Park & Jongseok Kim',
   author_email = 'kbpark.linguist@gmail.com',
   url = 'https://github.com/ZerdNerd/g2p_pl', # use the URL to the github repo
-  download_url = 'https://github.com/Kyubyong/g2p/archive/1.0.0.tar.gz', # I'll explain this in a second
+  download_url = 'https://github.com/ZerdNerd/g2p_pl/archive/1.0.0.tar.gz', # I'll explain this in a second
   keywords = ['g2p','g2p_pl'], # arbitrary keywords
   classifiers = [],
   install_requires = [
