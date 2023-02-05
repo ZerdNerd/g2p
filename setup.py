@@ -10,8 +10,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-  name = 'g2p_en',
-  packages = ['g2p_en'], # this must be the same as the name above
+  name = 'g2p_pl',
+  packages = ['g2p_pl'], # this must be the same as the name above
   version = '2.0.0',
   description = 'A Simple Python Module for English Grapheme To Phoneme Conversion - or Polish, dunno.',
   long_description=long_description,
