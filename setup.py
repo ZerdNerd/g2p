@@ -10,15 +10,15 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-  name = 'g2p_pl',
-  packages = ['g2p_pl'], # this must be the same as the name above
+  name = 'g2p_en',
+  packages = ['g2p_en'], # this must be the same as the name above
   version = '2.0.0',
   description = 'A Simple Python Module for English Grapheme To Phoneme Conversion - or Polish, dunno.',
   long_description=long_description,
   author = 'ZerdNerd & Kyubyong Park & Jongseok Kim',
   author_email = 'kbpark.linguist@gmail.com',
-  url = 'https://github.com/ZerdNerd/g2p_pl', # use the URL to the github repo
-  download_url = 'https://github.com/ZerdNerd/g2p_pl/archive/1.0.0.tar.gz', # I'll explain this in a second
+  url = 'https://github.com/ZerdNerd/g2p_en', # use the URL to the github repo
+  download_url = 'https://github.com/ZerdNerd/g2p_en/archive/1.0.0.tar.gz', # I'll explain this in a second
   keywords = ['g2p','g2p_pl'], # arbitrary keywords
   classifiers = [],
   install_requires = [
