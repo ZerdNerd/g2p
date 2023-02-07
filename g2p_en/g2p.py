@@ -52,15 +52,7 @@ class G2p(object):
     def __init__(self):
         super().__init__()
         self.graphemes = ["<pad>", "<unk>", "</s>"] + list("abcdefghijklmnopqrstuvwxyzęółśążźćń")
-        self.phonemes = ["<pad>", "<unk>", "<s>", "</s>"] + ['AA0', 'AA1', 'AA2', 'AE0', 'AE1', 'AE2', 'AH0', 'AH1', 'AH2', 'AO0',
-                                                             'AO1', 'AO2', 'AW0', 'AW1', 'AW2', 'AY0', 'AY1', 'AY2', 'B', 'CH', 'D', 'DH',
-                                                             'EH0', 'EH1', 'EH2', 'ER0', 'ER1', 'ER2', 'EY0', 'EY1',
-                                                             'EY2', 'F', 'G', 'HH',
-                                                             'IH0', 'IH1', 'IH2', 'IY0', 'IY1', 'IY2', 'JH', 'K', 'L',
-                                                             'M', 'N', 'NG', 'OW0', 'OW1',
-                                                             'OW2', 'OY0', 'OY1', 'OY2', 'P', 'R', 'S', 'SH', 'T', 'TH',
-                                                             'UH0', 'UH1', 'UH2', 'UW',
-                                                             'UW0', 'UW1', 'UW2', 'V', 'W', 'Y', 'Z', 'ZH']
+        self.phonemes = ["<pad>", "<unk>", "<s>", "</s>"]
         self.g2idx = {g: idx for idx, g in enumerate(self.graphemes)}
         self.idx2g = {idx: g for idx, g in enumerate(self.graphemes)}
 
@@ -142,7 +134,7 @@ class G2p(object):
             preds.append(pred)
             dec = np.take(self.dec_emb, [pred], axis=0)
 
-        preds = [self.idx2g.get(idx, "<unk>") for idx in preds]
+        preds = [self.idx2p.get(idx, "<unk>") for idx in preds]
         return preds
 
     def __call__(self, text):
