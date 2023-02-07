@@ -142,7 +142,7 @@ class G2p(object):
             preds.append(pred)
             dec = np.take(self.dec_emb, [pred], axis=0)
 
-       # preds = [self.idx2p.get(idx, "<unk>") for idx in preds]
+        preds = [self.idx2g.get(idx, "<unk>") for idx in preds]
         return preds
 
     def __call__(self, text):
