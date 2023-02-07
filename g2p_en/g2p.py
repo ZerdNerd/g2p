@@ -163,7 +163,7 @@ class G2p(object):
         # steps
         prons = []
         for word, pos in tokens:
-            if re.search("[a-z]", word) is None:
+            if re.search("[a-ń]", word) is None:
                 pron = [word]
 
             elif word in self.homograph2features:  # Check homograph
@@ -172,8 +172,8 @@ class G2p(object):
                     pron = pron1
                 else:
                     pron = pron2
-            elif word in self.cmu:  # lookup CMU dict
-                pron = self.cmu[word][0]
+        #    elif word in self.cmu:  # lookup CMU dict
+        #        pron = self.cmu[word][0]
             else: # predict for oov
                 pron = self.predict(word)
 
