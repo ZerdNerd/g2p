@@ -52,7 +52,9 @@ class G2p(object):
     def __init__(self):
         super().__init__()
         self.graphemes = ["<pad>", "<unk>", "</s>"] + list("abcdefghijklmnopqrstuvwxyzęółśążźćń")
-        self.phonemes = ["<pad>", "<unk>", "<s>", "</s>"] + ['AA', 'AO', 'B', 'CH', 'D', 'EH', 'F', 'G', 'HH', 'IY', 'JH', 'K', 'L', 'M', 'N', 'NG', 'P', 'R', 'S', 'SH', 'T', 'UW', 'V', 'W', 'Y', 'Z', 'ZH']
+        self.phonemes = ["<pad>", "<unk>", "<s>", "</s>"] + ['AA', 'AO', 'B', 'CH', 'D', 'EH', 'F', 'G', 'HH', 
+                                                             'IY', 'JH', 'K', 'L', 'M', 'N', 'NG', 'P', 'R', 'S', 
+                                                             'SH', 'T', 'UW', 'V', 'W', 'Y', 'Z', 'ZH']
         self.g2idx = {g: idx for idx, g in enumerate(self.graphemes)}
         self.idx2g = {idx: g for idx, g in enumerate(self.graphemes)}
 
